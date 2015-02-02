@@ -1,0 +1,77 @@
+body{
+
+	/*background-color: #FAEBD7; */
+	/*font-family: Helvetica, verdana, sans-serif;*/
+	font-size:16px;
+	/*pay attention to this value */
+	font-family: verdana,'Permanent Marker', cursive;
+
+}
+
+h1{
+	font-size: 2.5rem; /*this will multiple the font size by 2.5xbase font size, which should be around 40px */
+	font-family: 'Permanent Marker';
+}
+
+h2{
+
+font-weight: normal;
+
+}
+
+h2 a{
+   front-size: italic;
+}
+
+p, ul, ol {
+	font-size: 0.8rem;
+	max-width: 40em;
+	line-height: 1em;
+}
+
+ol li{
+list-style-type:upper-roman;
+}
+
+nav a{
+	display: inline-block;
+	color: white;
+	background-color: rgb(250,100,50);
+	font-size: 1rem;
+	padding: 0.5em 0.75em;
+	/*top, right, bottom, left */
+	text-decoration:none;
+
+	-webkit-transition:background-color 0.5s;
+	transition:background-color 1s;
+}
+
+nav a:hover, nav a:focus {
+	background-color: #FAEBD7;
+}
+
+nav a:first-of-type{
+margin-left: 1em;
+
+}
+form {
+	background-color: rgba(250,240,50,0.6);
+	padding: 1em;
+	display:inline-block; /*used to make a block to prevent over spill on the right*/
+}
+
+label{
+display:block;
+}
+
+img{ 
+	max-width: 100%;
+	height:auto;
+}
+
+.inputwrapper{
+ margin:0 0 2em 0; 
+}
+.general_padding{
+padding: 2em 2em;
+}

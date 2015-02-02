@@ -1,0 +1,237 @@
+
+@font-face{
+
+	font-family: "Titillium";
+	font-weight: normal;
+	font-style: normal;
+	src: url('fonts/Titillium-Regular.eot');
+	src: url('fonts/Titillium-Regular.eot?#iefix') format('embedded-openty'),
+	     url('fonts/Titillium-Regular.woff') format('woff'),
+		 url('fonts/Titillium-Regular.ttf') format('truetype');
+ }
+
+ @font-face{
+
+	font-family: "Titillium";
+	font-weight: bold;
+	font-style: normal;   
+    src: url('fonts/Titillium-Bold.eot');
+	src: url('fonts/Titillium-Bold.eot?#iefix') format('embedded-openty'),
+	     url('fonts/Titillium-Bold.woff') format('woff'),
+		 url('fonts/Titillium-Bold.ttf') format('truetype');
+}
+
+h1 {font-family: "Titillium", serif;}
+
+nav {
+	position: fixed;
+	top:0;
+	right: 1em;
+	z-index: 2;
+}
+
+figcaption {
+
+position: absolute;
+bottom: 1em;
+left: 1em;
+color: white;
+
+}
+
+figure {
+
+	position:relative;
+	float: right;
+}
+
+h2{ 
+	clear:both;
+}
+
+
+body {
+	font-family: Arial, Verdana, sans-serif;
+	font-size: 16px; /* keep this value in mind when we use 'rem' units */
+	color: black;
+}
+
+
+
+h1 {
+	/* Here we have applied the Google font + backups */
+	/*font-family: 'Russo One', Arial, sans-serif;*/
+	font-size: 2.5rem; /* equal to 40px (16px * 2.5) */
+}
+
+
+
+h2 {
+	/* We can tell things that are bold by default, not to be */
+	font-weight: normal;
+	font-size: 2rem; /* equal to 32px (16px * 2) */
+
+	/* Note that the margin-top takes the font-size into account */
+	margin-top: 1.5em; /* equal to 48px (32px * 1.5) */
+}
+
+
+
+/* Here we specify that only when 'a' shows up in 'h2' should we apply this style */
+h2 a {
+	font-style: italic;
+}
+
+
+
+/* Note that you use commas to style multiple things the same way */
+p, ul, ol {
+	font-size: 0.8em; /* make the size 12.8px (16px * 0.8) */
+	
+	/* Note that the max-width takes the font-size into account */
+	max-width: 40em; /* maximum width is now 512px (12.8px * 40) */
+	line-height: 1rem; /* line-height 16px (16px * 1em) */
+}
+
+
+nav a {
+	/* 
+		By specifying these as inline-block, they will have a height, as well as a definable top and bottom margin. Unlike block elements, they will appear next to one another though
+	*/
+	display: inline-block;
+	color: white;
+	background-color: rgb(250,100,75);
+	font-size: 1.25rem;
+
+	/* 
+		Remember that the margins are the space outside of the box. The shorthand below makes all margins 0.25em.
+	*/
+	margin: 0.25em; 
+
+	/* 
+		Remember that the padding is the space inside of the box, between the contents and the border. The shorthand below is top/bottom = 0.25em, left/right = 0.45em.
+	*/
+	padding: 0.25em 0.45em; 
+
+	/*
+		Defining transitions for the backgrounds of our buttons are quite
+		easy now. The declaration goes 'item-to-transition #s easing-type'.
+		We use the -webkit- browser prefix because some older android browsers 
+		still necessitate it.
+	*/
+	-webkit-transition: background-color 0.5s ease-out;
+	transition: background-color 0.5s ease-out;
+}
+
+/* 
+	Pseudo-classes like 'first-of-type' let you select specific subsets of
+	a selector, in this case, only the first 'nav a' will be styled as such
+*/
+nav a:first-of-type {
+	margin-left: 0;
+}
+
+/* Here we are styling the active and hover states of the buttons */
+nav a:active, a:hover {
+	background-color: rgb(150,150,150)
+}
+
+
+
+/* Here we specify that only when 'li' shows up in 'ul' should we apply this style */
+ul li {
+	list-style-type: circle;
+}
+
+
+
+
+img {
+	/* 
+		We are saying we want the img to adjust its height accordingly
+		when the width changes
+	*/
+	height: auto; 
+
+	/* 
+		Then we tell it we don't want it to exceed 100% of the parent element 
+		(we make it resize with the browser window) 
+	*/
+	max-width: 100%;
+
+	/* 
+		CSS allows for some shorthand, in this case, we are specifying:
+		border: width type colour;
+	*/
+	border: 1px solid #888888; 
+}
+
+
+
+figure {
+	margin-left: 0; /* setting there to be no margin on the left */
+}
+
+
+
+figcaption {
+	font-size: 0.8rem;
+	font-style: italic;
+}
+
+
+
+a {
+	color: #007FFF; /* This is a HEX colour code, which can be read as #RRGGBB */
+}
+
+/* Here we are styling the 'a' tag in the 'active' and 'hover' states */
+a:active, a:hover {
+	color: #888888; 
+	text-decoration: none;
+}
+
+
+a:visited {
+	color: #8968CD;
+}
+
+
+
+
+form {
+	display: inline-block;
+	background-color: rgb(240, 240, 50);
+	padding: 1em;
+}
+
+/* 
+	All classes start with a period, but can be applied as many times as necessary
+	in your HTML to style different items
+*/
+.input-wrapper {
+	margin: 0 0 1em 0; /* Here we are defining the margins for 'top right bottom left' */
+}
+
+label {
+	/*
+		Setting the display to block forces the input fields to move down to the
+		next line
+	*/
+	display: block;
+}
+
+
+/*
+	Here we are changing our box-model from the default 'content-box' to 
+	border-box. By using the asterisk (*), and the pseudo-selectors of ::after
+	and ::before, we ensure that everything will use the specified box-model
+	
+	content-box model = width of box is based on content
+
+	border-box model = width of box is calculated based on content+padding+border
+*/
+
+*, *::after, *::before {
+	box-sizing: border-box;
+}
